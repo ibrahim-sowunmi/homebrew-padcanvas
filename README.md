@@ -31,6 +31,8 @@ brew upgrade --cask ibrahim-sowunmi/padcanvas/padcanvas
 
 Save your drawing and quit PadCanvas before updating. Updates become available when the publisher updates this tap.
 
+From version 1.0 (30), PadCanvas also updates itself: when it offers a new version, click Install and Restart. You can use either way. If PadCanvas has already updated itself, `brew upgrade` may download the same version again, which is harmless.
+
 ## Uninstall
 
 ```sh
@@ -46,5 +48,7 @@ This removes the application, preserving drawings, projects, preferences and acc
 3. Update `version` (`marketing-version,build`) and `sha256` in `Casks/padcanvas.rb`.
 4. Run `brew style Casks/padcanvas.rb`, `brew audit --cask ibrahim-sowunmi/padcanvas/padcanvas`, and `brew fetch --cask ibrahim-sowunmi/padcanvas/padcanvas` from a tapped checkout. Test installation on a clean Mac or in an isolated application directory.
 5. Commit and push the cask change. Never replace a previously published ZIP with different bytes at the same URL.
+
+The cask doesn't declare `auto_updates true` yet, although 1.0 (30) and later update themselves. With that flag, `brew upgrade` skips the app, and installs from 1.0 (28) and earlier, which can't update themselves, would stay behind. Add it once most installs are on 1.0 (30) or later.
 
 This tap distributes installation metadata only. PadCanvas's application terms remain on [padcanvas.app](https://padcanvas.app/terms).
