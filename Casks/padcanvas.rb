@@ -1,6 +1,6 @@
 cask "padcanvas" do
-  version "1.0,36"
-  sha256 "970611363f357726fa62167c8aebe710e7864d7549ba430ae19ee9c78edcbda7"
+  version "1.0,37"
+  sha256 "e1b076cd1406d97e4a81ed6e7ed5227eeac3499d1d7d579a13b0cfcb74de34fc"
 
   url "https://padcanvas.app/downloads/PadCanvas-#{version.csv.first}-#{version.csv.second}.zip"
   name "PadCanvas"
